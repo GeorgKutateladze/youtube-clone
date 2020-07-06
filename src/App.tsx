@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { SearchBar, VideoDetail, VideoList } from "./components";
 import './App.css';
+import {useSelector} from "react-redux";
+import {IStore} from "./_store";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+    const videos = useSelector((store: IStore) => store.data.collection.items);
+    console.log(videos);
+    return (
+        <div className="App">
+            <SearchBar/>
+            <div className="container">
+                {videos[0] && <VideoDetail video={videos[0]}/>}
+                <VideoList list={videos}/>
+            </div>
+        </div>
+    );
+};
 
 export default App;

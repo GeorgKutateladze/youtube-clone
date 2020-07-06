@@ -1,0 +1,29 @@
+.video-detail {
+    padding-right: 10px;
+    border-right: 1px solid #b6bbc5;
+}
+
+iframe {
+    border-radius: 20px;
+}
+
+.video-title {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.video-channel {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.video-description {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
